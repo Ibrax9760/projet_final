@@ -10,25 +10,27 @@
     <!-- Page de connexion -->
     <div id="login-page">
         <h2>Connexion</h2>
-        <form onsubmit="showArticlePage(); return false;">
+        <form action="login.php" method="post">
             <label for="email">Adresse e-mail :</label><br>
             <input type="email" id="email" name="email" required><br><br>
             <label for="password">Mot de passe :</label><br>
             <input type="password" id="password" name="password" required><br><br>
             <button type="submit">Se connecter</button>
         </form>
+        
     </div>
 
     <!-- Page de dépôt d'articles (cachée par défaut) -->
     <div id="article-page" style="display: none;">
         <h2>Déposer un Article</h2>
-        <form>
+        <form action="submit_article.php" method="post">
             <label for="title">Titre de l'article :</label><br>
             <input type="text" id="title" name="title" required><br><br>
             <label for="content">Contenu de l'article :</label><br>
             <textarea id="content" name="content" rows="10" cols="30" required></textarea><br><br>
             <button type="submit">Soumettre</button>
         </form>
+        
     </div>
 
     <script>
@@ -42,13 +44,10 @@
             article_page.style.display = "block"
             console.log(article_page)
             
-            // document.getElementById('login-page').style.display = 'none';
-           // document.getElementById('article-page').style.display = 'block';
+        
         }
 
-     // commentaires
     </script>
 
 </body>
 </html>
-
